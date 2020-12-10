@@ -1,0 +1,27 @@
+﻿<!--
+Name folder added as Page 358, Step 8.
+Name\Index.cshtml add as Page 358 Step 9.
+See Home\Index.cshtml for adding TeamListViewModel, but
+the Title of this page should be "Name Change".
+Use the <div> tag format of Home\Index.cshtml, but the
+<form>...</form> code is in the text on page 358 Steps 9-10.
+-->
+@model TeamListViewModel
+@{ 
+    ViewData["Title"] = "Name Change";
+}
+<div class="row">
+    <div class="col-sm-3">
+        <h3 class="mt-3">Name Change</h3>
+
+        <form asp-action="Change" method="post">
+            <input asp-for="@Model.UserName" placeholder="Type name here"
+                   class="mb-3" /><br />
+            <!-- you can code a link to the Home page here -->
+            <button type="submit" class="btn btn-primary">
+                Change Name
+            </button>
+        </form>
+
+    </div>
+</div>
